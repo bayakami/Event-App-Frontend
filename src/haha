@@ -1,0 +1,40 @@
+<Form onSubmit={(e) => submitHandler(e)} id="addForm">
+        Name: <br />
+        <input
+          type="text"
+          defaultValue={props.currentEvent?.name}
+          name="eventName"
+          disabled={disabled}
+        />
+        <br />
+        Location:
+        <br />
+        <input
+          type="text"
+          defaultValue={props.currentEvent?.location}
+          name="location"
+          disabled={disabled}
+        />
+        <br />
+        Description: <br />
+        <textarea
+          type="text" maxLength="100" rows="6"
+          defaultValue={props.currentEvent?.description}
+          name="description"
+          disabled={disabled}
+        />
+        <br />
+        Date and time: <br />
+        <input
+          type="datetime-local"
+          defaultValue={props.currentEvent?.date}
+          name="date"
+          disabled={disabled}
+        />
+        <br />
+        <br />
+        <Button variant="dark" type="submit" disabled={disabled}>
+          {" "}
+          Submit{" "}
+        </Button>
+      </Form>

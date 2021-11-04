@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
+import Table from 'react-bootstrap/Table';
 import Add from "./Add";
+import Button from 'react-bootstrap/Button';
 
 function Dashboard(props) {
   const [events, cEvents] = useState([]);
@@ -30,8 +32,9 @@ function Dashboard(props) {
           <td>{current.description}</td>
           <td>{current.date}</td>
           <td>
-            <button onClick={() => removeEvent(current._id)}> remove</button>
-            <button onClick={() => updateEvent(current)}> update</button>
+            <Button onClick={() => removeEvent(current._id)} variant="danger">Remove</Button>
+            
+            <Button onClick={() => updateEvent(current)} type="button" variant="dark">Update</Button>
           </td>
         </tr>
       );
@@ -42,7 +45,7 @@ function Dashboard(props) {
     <>
       Dashboard
       <br />
-      <table>
+      <Table bordered striped hover size="sm" variant="danger" responsive>
         <theevent>
           <tr>
             <th>Event</th>
@@ -52,7 +55,7 @@ function Dashboard(props) {
           </tr>
         </theevent>
         <tbody>{buildrows()}</tbody>
-      </table>
+      </Table>
       <br />
       <br />
       <Add
