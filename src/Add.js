@@ -71,7 +71,7 @@ function Add(props) {
               </Form.Group>
           </Col>
         </Row>
-        <Button variant="secondary" type="submit" disabled={disabled}>
+        <Button variant="warning" type="submit" disabled={disabled}>
         {" "}
           Submit{" "}
         </Button>

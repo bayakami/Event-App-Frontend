@@ -34,7 +34,7 @@ function Dashboard(props) {
           <td>
             <Button onClick={() => removeEvent(current._id)} variant="danger">Remove</Button>
             
-            <Button onClick={() => updateEvent(current)} type="button" variant="dark">Update</Button>
+            <Button onClick={() => updateEvent(current)} type="button" variant="warning">Update</Button>
           </td>
         </tr>
       );
@@ -45,15 +45,15 @@ function Dashboard(props) {
     <>
       Dashboard
       <br />
-      <Table className="mx-4" hover size="sm" variant="danger">
-        <theevent>
+      <Table className="mx-4" size="sm" >
+        <thead>
           <tr>
             <th>Event</th>
             <th>Location</th>
             <th>Description</th>
             <th>Date</th>
           </tr>
-        </theevent>
+        </thead>
         <tbody>{buildrows()}</tbody>
       </Table>
       <br />
