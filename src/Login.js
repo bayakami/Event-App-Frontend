@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import {Row, Col, Form, Button} from 'react-bootstrap';
 
 function Login(props) {
   
@@ -28,21 +29,28 @@ function Login(props) {
     <>
       Login
       <br />
-      <form onSubmit={(e) => submitHandler(e)}>
-        username
-        <br />
-        <input type="text" name="username" disabled={disabled} />
-        <br />
-        password
-        <br />
-        <input type="password" name="password" disabled={disabled} />
-        <br />
-        <br />
-        <button type="submit" disabled={disabled}>
-          {" "}
+      <Form className="mx-4 my-4" onSubmit={(e) => submitHandler(e)}>
+        <Row>
+          <Col>
+              <Form.Group controlId="username" >
+                <Form.Label>username</Form.Label>
+                <Form.Control type="text" disabled={disabled}
+                />
+              </Form.Group>
+          </Col>
+          <Col>
+              <Form.Group controlId="password" >
+                <Form.Label>password</Form.Label>
+                <Form.Control type="password" disabled={disabled}
+                />
+              </Form.Group>
+          </Col>
+        </Row>
+        <Button className="mt-2" variant="secondary" type="submit" disabled={disabled}>
+        {" "}
           Submit{" "}
-        </button>
-      </form>
+        </Button>
+      </Form>
     </>
   );
 }

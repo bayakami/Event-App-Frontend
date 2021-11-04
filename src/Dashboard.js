@@ -45,7 +45,7 @@ function Dashboard(props) {
     <>
       Dashboard
       <br />
-      <Table bordered striped hover size="sm" variant="danger" responsive>
+      <Table className="mx-4" hover size="sm" variant="danger">
         <theevent>
           <tr>
             <th>Event</th>

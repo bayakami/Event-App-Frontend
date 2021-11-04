@@ -37,7 +37,7 @@ function Add(props) {
     <>
       {props.currentEvent ? "Update" : "Add"}
       <br />
-      <Form className="mb-3" onSubmit={(e) => submitHandler(e)} id="addForm">
+      <Form className="mx-4" onSubmit={(e) => submitHandler(e)} id="addForm">
         <Row>
           <Col>
               <Form.Group controlId="eventName" >
