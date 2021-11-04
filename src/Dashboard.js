@@ -45,7 +45,7 @@ function Dashboard(props) {
     <>
       Dashboard
       <br />
-      <Table className="mx-4" size="sm" >
+      <Table className="mx-4" size="sm" responsive >
         <thead>
           <tr>
             <th>Event</th>

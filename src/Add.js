@@ -1,6 +1,8 @@
 import React, { useState } from "react";
-import {Button, Table, Row, Col, Form} from 'react-bootstrap';
-import 'bootstrap/dist/css/bootstrap.min.css'
+import {Button, Row, Col, Form} from 'react-bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import toastr from 'toastr';
+import 'toastr/build/toastr.min.css';
 
 function Add(props) {
   const [disabled, cDisabled] = useState(false);
@@ -25,6 +27,7 @@ function Add(props) {
       .then(() => {
         cDisabled(false);
         document.getElementById("addForm").reset();
+        toastr.success("You can now view the event on the Dashboard", "Event added!")
         props.refreshList();
       })
       .catch(() => {
