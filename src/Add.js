@@ -7,13 +7,7 @@ import toastr from 'toastr';
 
 function Add(props) {
   const [disabled, cDisabled] = useState(false);
-  /* toastr.options = {
-   
-    "timeOut": "20000000",
   
-  }
-  toastr.clear(); */
-
   const submitHandler = (e) => {
     console.log("submit handler")
     e.preventDefault();
@@ -68,7 +62,7 @@ function Add(props) {
         <Row>
           <Col>
               <Form.Group controlId="date" >
-                <Form.Label>Location</Form.Label>
+                <Form.Label>Date and time</Form.Label>
                 <Form.Control type="datetime-local" defaultValue={props.currentEvent?.date} disabled={disabled} required
                 />
               </Form.Group>

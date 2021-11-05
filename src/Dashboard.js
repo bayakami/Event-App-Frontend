@@ -49,7 +49,7 @@ function Dashboard(props) {
     <>
       Dashboard
       <br />
-      <Table className="mx-4" size="sm" responsive fluid>
+      <Table className="mx-4" size="sm" responsive="md" fluid>
         <thead>
           <tr>
             <th>Event</th>
