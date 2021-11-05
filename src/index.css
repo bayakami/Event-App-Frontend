@@ -3,8 +3,14 @@
   background-color: #202020;
   color:white;
 }
-body {
+
+.toast-message {
+  background-color: #51a351;
   
 } 
+
+.toast-title {
+  background-color: #51a351;
+}
 
 

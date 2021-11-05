@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import Table from 'react-bootstrap/Table';
 import Add from "./Add";
 import Button from 'react-bootstrap/Button';
+import moment from 'moment';
 
 function Dashboard(props) {
   const [events, cEvents] = useState([]);
@@ -23,14 +24,17 @@ function Dashboard(props) {
     refreshList();
   }, []);
 
+  
   const buildrows = () => {
+  
     return events.map((current) => {
       return (
         <tr key={current._id}>
           <td>{current.name}</td>
           <td>{current.location}</td>
           <td>{current.description}</td>
-          <td>{current.date}</td>
+          {/* moment().format('MMMM Do YYYY, h:mm:ss a') */}
+          <td>{moment(current.date).format('MMMM Do YYYY, h:mm:ss a')}</td>
           <td>
             <Button onClick={() => removeEvent(current._id)} variant="danger">Remove</Button>
             
@@ -45,7 +49,7 @@ function Dashboard(props) {
     <>
       Dashboard
       <br />
-      <Table className="mx-4" size="sm" responsive >
+      <Table className="mx-4" size="sm" responsive fluid>
         <thead>
           <tr>
             <th>Event</th>
